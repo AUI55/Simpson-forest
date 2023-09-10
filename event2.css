@@ -1,0 +1,380 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.event2-head {
+    min-height: 15vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0,0,0,0.9));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*navigation bar styling*/
+nav {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	
+	padding: 0 2%;
+	height: 100px;
+	background-color:transparent;
+}
+nav img{
+	width: 75px;
+	margin-top: 2%;
+	
+}
+
+
+nav .navlinks {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .navlinks li {
+	list-style: none;
+}
+nav .navlinks a {
+    content: '';
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.6s ease;
+	padding: .5em;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+nav .navlinks a:hover{
+    color: #a815d4;
+}
+
+#navtoggle {
+	position: absolute;
+	top: -100px;
+}
+
+/*styling of hamburger menu */
+nav .hamburger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .hamburger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+/*media queries for nav bar (This is to make the nav bar mobile responsive)*/
+
+@media screen and (max-width: 1225px) {
+	
+	nav .navlinks {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .navlinks a {
+		font-size: 20px;
+	}
+	nav :checked ~ .navlinks {
+		bottom: 0;
+	}
+	nav .hamburger {
+		display: block;
+	}
+	nav :checked ~ .hamburger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .hamburger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .hamburger .line:nth-child(2) {
+		opacity: 0;
+	}
+}
+
+
+/*Body styling*/
+
+
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(Images/event2.jpg);
+}
+
+/*Animation*/
+
+.intro span {
+	font-size: 75px;
+	color: rgb(255, 255, 255);
+	padding: 20px;
+}
+#flip {
+	animation: flipV 10s infinite;
+}
+	@keyframes flipV {
+	50%{
+		transform: rotateY(180deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+	
+}
+
+/*Introduction*/
+
+.intro h2 {
+    font-family: "Crimson text", serif;
+    font-size: 47px;
+    color: #fff;
+	margin-left: 40%;
+	margin-right: 35%;
+	padding: 13px;
+	
+}
+.intro p {
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+	line-height: 45px;
+	margin-left: 15%;
+	margin-right: 20%;
+	margin-top: 5%;
+}
+
+/*main image styling*/
+
+.main-img img {
+	width: 80%;
+	align-items: center;
+	margin: 9%;
+}
+
+/*Capacity table styling*/
+table td {
+	border-bottom: 1px solid #fff;
+}
+.mvenue-cap {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.mvenue-cap td {
+	color: #fff;
+	padding: 0.7em ;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+.mvenue-cap th {
+	font-family: "Crimson text", serif;
+	color: #fff;
+	font-size: 25px;
+	padding: 0.7em;
+}
+table {
+	position: relative;
+	border-collapse: collapse;
+	width: 80%;
+	overflow: hidden;
+}
+/*Booking section styling*/
+
+.availability {
+	color: #fff;
+}
+fieldset{
+	color: #fff;
+	max-width: 1200px;
+	margin: auto;
+	margin-top: 100px;
+	
+	
+}
+fieldset legend {
+	font-size: 27px;
+}
+.wed-bk p label{
+	margin: 20px;
+	display: inline-block;
+
+}
+.sb {
+	cursor: pointer;
+}
+.availability {
+	margin: 3% 15%;
+	
+}
+.availability p {
+	padding: 25px;
+}
+
+
+/*Footer styling*/
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.event2-footer{
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)), url(Images/event2-bk.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-color: #44025e9f;
+    padding: 70px 0; 
+}
+
+
+.footercolumn{
+    width: 25%;
+    padding: 0 15px;
+ }
+
+.footercolumn ul{
+    position: relative;
+    right: 40px;
+}
+.footercolumn ol {
+    position: relative;
+    right: 40px;
+}
+
+ .footercolumn h4{
+	font-size: 22px;
+	color: #f5eeee;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footercolumn ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footercolumn ol li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footercolumn ul li a{
+	font-size: 20px;
+	text-transform: capitalize;
+	color: #fffdfd;
+	text-decoration: none;
+	font-weight: 300;
+	color: #e6e2e2;
+	display: block;
+	transition: all 0.3s ease;
+ 
+}
+
+.footercolumn ol li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #fffdfd;
+	text-decoration: none;
+	font-weight: 300;
+	color: #e6e2e2;
+	display: block;
+	transition: all 0.3s ease;
+ 
+}
+
+.footercolumn ul li a:hover{
+	color: #76ff64;
+	padding-left: 8px;
+}
+
+.footercolumn ol li a:hover{
+	color: #8fcede;
+	padding-left: 8px;
+}
+
+.footercolumn .medialinks a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(191, 174, 174, 0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footercolumn .medialinks a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+
+/*Terms and developer details styling*/
+
+
+.copyright{
+    background:rgba(10, 48, 17, 0.9);
+    padding:20px;
+    color:rgb(150, 250, 167);
+    height :50px;
+    text-align:center;
+    
+}
+
+.copyright p h1{
+ font-style:italic;
+ padding:10px;
+}
+.design{
+    padding:2px;
+    background-color:rgba(20, 49, 20, 0.562);
+}
+.dsg {
+	background: rgba(10, 48, 17, 0.9);
+	text-align: center;
+}
+.dsg h6{
+	text-align: center;
+	color: rgb(150, 250, 167);
+	font-size: 12px;
+}
