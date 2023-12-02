@@ -266,7 +266,7 @@ h3 {
 .offers p {
     color: #0d0c0c;
     font-size: 19px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 22px;
     padding: 5px;
 }
@@ -498,6 +498,8 @@ h3 {
     bottom: 49%;
     opacity: 1;
 }
+
+
 /*Dining introduction*/
 
 
@@ -714,7 +716,7 @@ p {
 }
 @media all and (max-width:700px) {
     #img-i {
-        width: 60%;
+        width: 50%;
     }
 }
 /*Adventure page styling*/
@@ -842,7 +844,7 @@ p {
     margin: 30px 0;
     font-size: 47px;
     font-family: serif;
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
 }
 .B-intro p { 
@@ -865,6 +867,92 @@ p {
     margin: 30px;
     display: inline-block;
 }
-.sb {
+#bookForm 
+{
+    max-width: 1200px;
+    margin: auto;
+}
+#bookForm legend
+{
+    font-size: 30px;
+}
+h2 
+{ 
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: 300;
+}
+h3
+{
+    font-size: 25px;
+    font-weight: 300;
+    text-decoration:underline;
+}
+
+form
+{
+    width: 100%;
+    position:relative;
+    margin-top:20px;
+}
+.form-row
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.form-column label
+{
+    font-size: 20px;
+}
+
+textarea, input
+{
+    width: 100%;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+.Validation
+{
+    font-size: 16px;
     cursor: pointer;
+}
+.promo-code
+{
+    width: 25%;
+}
+.Book-now-btn
+{
+    font-size: 20px;
+    align-items: center;
+}
+.checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px; /* Adjust the gap between items */
+    align-items: center;
+}
+
+select, option 
+{
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 30px;
+    border-radius: 3px;
+}
+#CurrentBookingDetails{
+    font-size: 22px;
+}
+#RoomDetailsofCB{
+    font-size: 22px;
+}
+#bookForm{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
