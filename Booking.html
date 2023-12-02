@@ -8,10 +8,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!--Favicon Styling-->
+    <!--
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+     -->
     <link rel="shortcut icon" href="Images/Logo.jpg" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -43,95 +44,245 @@
    <section class="B-intro">
     <h2>B O O K I N G</h2>
     <p>Welcome to Simpson Forest Hotel, where nature's beauty meets luxurious comfort. Nestled amidst the serene wilderness, our hotel offers a tranquil escape for your next getaway. Immerse yourself in the soothing ambiance of lush greenery while enjoying top-notch amenities and impeccable service. Book your stay with us today and experience the perfect blend of relaxation and refinement. Your tranquil retreat awaits at Simpson Forest Hotel.</p>
-   </section>
-   <fieldset class="Booking">
-    <legend>Booking Hotels</legend>
-    <form action="">
-    <p>
-        <label for="firstName">First Name :</label>
-        <input type="text" id="firstName" placeholder="First Name" required>
-        <label for="lastName">Last Name :</label>
-        <input type="text" id="lastName" placeholder="Last Name" required>
-    </p>
-    <p>
-       <label for="CheckIn">Check In :</label>
-       <input type="date" id="CheckIn" placeholder="Check In Date" required>
-       <label for="CheckOut">Check Out :</label>
-       <input type="date" id="CheckOut" placeholder="Check Out Date" required>
-    </p>
-    <p>
-        <label for="Nationality">Nationality :</label>
-        <input type="text" id="Nationality" placeholder="Nationality">
-    </p>
-    <p>
-        <label for="Adults">Number of Adults :</label>
-        <input type="number" id="Adults" placeholder="Number of Adults" min="1" required>
-        <label for="Children">Number of Children :</label>
-        <input type="number" id="Children" placeholder="Number of Children" min="0" required>
-    </p>
-    <p>
-        <label for="TelNo">Telephone :</label>
-        <input type="tel" id="TelNo" placeholder="Telephone Number" required max="15">
-        <label for="email">Email :</label>
-        <input type="email" id="email" placeholder="John@email.com">
-    </p>
-    <p>
-        <label for="Premier"> Premier :</label>
-        <input type="number" id="Premier" placeholder="Stays" min="1" required>
-        <label for="Deluxe"> Deluxe :</label> 
-        <input type="number" id="Deluxe" placeholder="Stays" min="1">
-        <label for="Twin-Deluxe"> Twin-Deluxe :</label>
-        <input type="number" id="Twin-Deluxe" placeholder="Stays" min="1">
-    </p>
-    <p>
-        <label for="promo">Promo Code :</label>
-        <input type="text" id="promo" max="6" placeholder="Promo Code">
-    </p>
-    <tr>
-        <td><strong>Payment Method</strong></td><br>
-        <td><input type="radio" name="payment"><label for="payment">Credit/Debit Card</label></td><br>
-        <td><input type="radio" name="payment"><label for="payment">Cash</label></td><br>
-    </tr>
-    <br>
-    <br>
-    <br>
-    <tr>
-        <td><input class="sb" type="submit" value="submit"> </td><td><input class="sb" type="reset" value="reset"></td>
-    </tr>
-    </form>
+   
+</section>
+   <fieldset id="bookForm">
+        <legend>Booking Hotels</legend>
+        <h2>BOOK  NOW</h2>
+
+        <!--Section of the Booking Page Form-->
+        <form action="">
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="FirstName">First Name : </label>
+                        <input id="firstName" type="text" placeholder="Type your Name Here" required>
+                    </section>
+                    <section class="form-column">
+                        <label for="lastName">Last Name : </label>
+                        <input id="lastName" type="text" placeholder="Type your Name Here" required>
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="Checkin">Check-In : </label>
+                        <input type="date" id="checkIn" required>
+                    </section>
+                    <section class="form-column">
+                        <label for="checkOut">Check-Out : </label>
+                        <input type="date" id="checkOut" required>
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="contactNumber">Contact Number: </label>
+                        <input type="tel" id="Contact" placeholder="0 123 456 789" required>
+                    </section>
+                    <section class="form-column">
+                        <label for="email">Email: </label>
+                        <input type="email" id="Mail" placeholder="Example@mail.com">
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="nationality">Nationality: </label>
+                        <input id="nationality" type="text" placeholder="Example: British" required>
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="numAdult">Adults: </label>
+                        <input id="no.Adults" type="number" placeholder="Number of Adults" min="1" max="8" required>
+                    </section>
+                    <section class="form-column">
+                        <label for="numChild">No of Child below 5 years: </label>
+                        <input id="no.Child_less5" type="number" placeholder="Number of Adults" min="0">
+                    </section>
+                    <section class="form-column">
+                        <label for="numChildov5">No of Child above 5 years: </label>
+                        <input id="no.Child_above5" type="number" placeholder="Number of Adults" min="0">
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="single">Single Room: Rs.25,000.00 </label>
+                        <input id="singleRoom" type="number" placeholder="Number of Rooms" min="0" max="4">
+                    </section>
+                    <section class="form-column">
+                        <label for="double">Double: Rs.35,000.00 </label>
+                        <input id="doubleRoom" type="number" placeholder="Number of Rooms" min="0" max="4">
+                    </section>
+                    <section class="form-column">
+                        <label for="triple">Triple: Rs.40,000.00 </label>
+                        <input id="tripleRoom" type="number" placeholder="Number of Rooms" min="0" max="4" maxlength="1">
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="extraBed">Extra Bed: Rs.8,000.00 </label>
+                       <select name="extra-Bed" id="extraBed">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                       </select>
+                    </section>
+                </section>
+                <section class="form-row">
+                    <section class="form-column">
+                        <label for="specialreq">Special Requirments: </label>
+                        <textarea name="special-req" id="" cols="5" rows="5"></textarea>
+                    </section>
+                </section>
+
+                <!--Output Fieldset-->
+
+                <fieldset>
+                    <legend>Total Cost</legend>
+                    <h3>Current Booking Details</h3>
+                    <div id="CurrentBookingDetails"></div>
+                    <br>
+                    <br>
+                    <hr>
+                    <br>
+                    <br>
+                    <h3>Cost of Current Booking</h3>
+                    <div id="RoomDetailsofCB"></div>
+                   <div id="CostofCurrentBooking"></div>
+                    
+                </fieldset>
+                <p><button type="button" id="Hellobtn">Pay</button></p>
+        </form>
    </fieldset>
+
+
+   <!--Adventure Booking Section-->
+
+
    <fieldset class="Booking">
     <legend>Adventure Booking</legend>
     <form action="">
-        <p>
-            <label for="firstName">First Name :</label>
-            <input type="text" id="firstName" placeholder="First Name" required>
-            <label for="lastName">Last Name :</label>
-            <input type="text" id="lastName" placeholder="Last Name" required>
-        </p>
-        <p>
-            <label for="Adults">Number of Adults :</label>
-            <input type="number" id="Adults" placeholder="Number of Adults" min="1" required>
-            <label for="Children">Number of Children :</label>
-            <input type="number" id="Children" placeholder="Number of Children" min="0" required>
-        </p>
-        <p>
-            <label for="TelNo">Telephone :</label>
-            <input type="tel" id="TelNo" placeholder="Telephone Number" required max="15">
-            <label for="email">Email :</label>
-            <input type="email" id="email" placeholder="John@email.com">
-        </p>
-        <tr>
-            <td><strong>Adventures</strong></td><br>
-            <td><input type="checkbox" name="adventure"><label for="adventure">Mountain Biking</label></td><br>
-            <td><input type="checkbox" name="adventure"><label for="adventure">Bird Watching</label></td><br>
-        </tr>
+        <section class="form-row">
+            <section class="form-column">
+                <label for="firstName">First Name : </label>
+                <input type="text" placeholder="Type your Name Here" id="FnAdv" required>
+            </section>
+            <section class="form-column">
+                <label for="lastName">Last Name : </label>
+                <input type="text" placeholder="Type your Name Here" id="LnAdv" required>
+            </section>
+        </section>
+        <section class="form-row">
+            <section class="form-column">
+                <label for="Date">Date: </label>
+                <input type="date" placeholder="Date" id="AdvDate" required>
+            </section>
+            <section class="form-column">
+                <label for="nationality">Nationality: </label>
+                <input type="text" placeholder="Example: British" id="AdvNationality" required>
+            </section>
+        </section>
+        <section class="form-row">
+            <section class="form-column">
+                <label for="numAdult">Adults: </label>
+                <input type="number" placeholder="Number of Adults" id="NumofAdultsAdventure" min="1" max="8" required>
+            </section>
+            <section class="form-column">
+                <label for="numChild">Children: </label>
+                <input type="number" placeholder="Number of Adults" id="NumofKidsAdventure" min="0">
+            </section>
+        </section>
+        <section class="form-row">
+            <section class="form-column">
+                <label for="contactNumber">Contact Number: </label>
+                <input type="tel" placeholder="0 123 456 789" id="ContactNo" required>
+            </section>
+            <section class="form-column">
+                <label for="email">Email: </label>
+                <input type="email" id="EmailAdv" placeholder="Example@mail.com">
+            </section>
+        </section>
+        
+        <section class="form-row">
+            
+            <section class="form-column">
+                <label for="diving">Diving: </label>
+                <select name="diving" id="Diving" >
+                    <option value="0" selected>None</option>
+                    <option value="1">1hr</option>
+                    <option value="2">2hr</option>
+                    <option value="3">3hr</option>
+                </select>
+            </section>
+            </section>
+        </section>
+        <section class="form-row">
+            <section class="form-column">
+                <label for="guide" id="AdvGuide">Guide : </label>
+                
+               <input type="radio" name="guide" id="guidecheck" value="Yes" required>
+               <label >Yes</label>
+                <input type="radio" name="guide" id="guidecheck2" value="No">
+                <label >No</label>
+            </section>
+        </section>
+    </form>
+    <fieldset>
+        <h3>Current Adventure Booking Details</h3>
+        <Div id="CurrentAdventureBooking"></Div>
         <br>
+        <hr>
         <br>
+        <h3>Current Cost of Adventure Booking</h3>
+        <Div id="CurrentCostofAdvBooking"></Div>
         <br>
-        <tr>
-            <td><input class="sb" type="submit" value="submit"> </td><td><input class="sb" type="reset" value="reset"></td>
-        </tr>
+    </fieldset>
+   </fieldset>
+
+   <fieldset class="Booking">
+    <legend>Payment</legend>
+    <form action="">
+         <!--Payment Section of the Form-->
+
+         <h2>Payment</h2>
+         <section class="form-row">
+             <img src="./Images/payment.png" alt="Accepted Cards Visa and Master Card">
+         </section>
+         <section class="form-row">
+             <section class="form-column">
+                 <label for="cardNumber">Card Number: </label>
+                 <input type="text" placeholder="342-12321-323-32" required>
+             </section>
+             <section class="form-column">
+                 <label for="cardName">Card Name: </label>
+                 <input type="text" placeholder="John Smith" required>
+             </section>
+         </section>
+         <section class="form-row">
+             <section class="form-column">
+                 <label for="expireDate">Expire Date: </label>
+                 <input type="text" required>
+             </section>
+             <section class="form-column">
+                 <label for="cvNumber">CV Number: </label>
+                 <input type="text" required>
+             </section>
+         </section>
+         <section class="form-row">
+             <section class="form-column">
+                 <label for="Promocode">Promo-Code : </label><br>
+                 <input class="promo-code" type="text" max="8">
+             </section>
+         </section>
+         <section class="form-row">
+             <section class="form-column">
+                 <button class="Validation">Check Validation</button>
+             </section>
+         </section>
+         
+             <p>
+                 <button class="room-btn" type="submit">BOOK</button>
+                 <button class="room-btn" type="reset">Reset</button>
+             </p>
+            
     </form>
    </fieldset>
 <!--Footer-->
@@ -180,5 +331,7 @@
     <p> &copy; Copyright 2023. All Rights Reserved . <strong>Sri Lanka</strong></p>
     <h6 class="design"> Developed by Amila Ishan </h6>
 </div>
+
+<script src="./main.js"></script>
 </body>
 </html>
