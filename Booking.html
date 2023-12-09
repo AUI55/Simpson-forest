@@ -7,17 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!--Favicon Styling-->
-    <!--
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-     -->
     <link rel="shortcut icon" href="Images/Logo.jpg" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 </head>
-<body>
+<body id="bookingbody">
    <header class="bookhead">
      <!--navigation bar -->
      <nav>
@@ -42,96 +38,103 @@
     </nav>
    </header> 
    <section class="B-intro">
-    <h2>B O O K I N G</h2>
+    <h2>B O O K I N G </h2>
+    <br>
+    <br>
     <p>Welcome to Simpson Forest Hotel, where nature's beauty meets luxurious comfort. Nestled amidst the serene wilderness, our hotel offers a tranquil escape for your next getaway. Immerse yourself in the soothing ambiance of lush greenery while enjoying top-notch amenities and impeccable service. Book your stay with us today and experience the perfect blend of relaxation and refinement. Your tranquil retreat awaits at Simpson Forest Hotel.</p>
    
 </section>
+<section>
    <fieldset id="bookForm">
         <legend>Booking Hotels</legend>
         <h2>BOOK  NOW</h2>
 
         <!--Section of the Booking Page Form-->
-        <form action="">
-                <section class="form-row">
-                    <section class="form-column">
-                        <label for="FirstName">First Name : </label>
+        <form id="bookingform">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="firstName">First Name : </label>
                         <input id="firstName" type="text" placeholder="Type your Name Here" required>
-                    </section>
-                    <section class="form-column">
+                    </div>
+                    <div class="form-column">
                         <label for="lastName">Last Name : </label>
                         <input id="lastName" type="text" placeholder="Type your Name Here" required>
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
-                        <label for="Checkin">Check-In : </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="checkIn">Check-In : </label>
                         <input type="date" id="checkIn" required>
-                    </section>
-                    <section class="form-column">
+                    </div>
+                    <div class="form-column">
                         <label for="checkOut">Check-Out : </label>
                         <input type="date" id="checkOut" required>
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
-                        <label for="contactNumber">Contact Number: </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="Contact">Contact Number: </label>
                         <input type="tel" id="Contact" placeholder="0 123 456 789" required>
-                    </section>
-                    <section class="form-column">
-                        <label for="email">Email: </label>
+                    </div>
+                    <div class="form-column">
+                        <label for="Mail">Email: </label>
                         <input type="email" id="Mail" placeholder="Example@mail.com">
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
                         <label for="nationality">Nationality: </label>
                         <input id="nationality" type="text" placeholder="Example: British" required>
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
-                        <label for="numAdult">Adults: </label>
-                        <input id="no.Adults" type="number" placeholder="Number of Adults" min="1" max="8" required>
-                    </section>
-                    <section class="form-column">
-                        <label for="numChild">No of Child below 5 years: </label>
-                        <input id="no.Child_less5" type="number" placeholder="Number of Adults" min="0">
-                    </section>
-                    <section class="form-column">
-                        <label for="numChildov5">No of Child above 5 years: </label>
-                        <input id="no.Child_above5" type="number" placeholder="Number of Adults" min="0">
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
-                        <label for="single">Single Room: Rs.25,000.00 </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="no.Adults">Adults: </label>
+                        <input id="no.Adults" type="number" placeholder="Number of Adults"  max="8" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="no.Child_less5">No of Child below 5 years: </label>
+                        <input id="no.Child_less5" type="number" placeholder="Number of Adults" min="0" max="8">
+                    </div>
+                    <div class="form-column">
+                        <label for="no.Child_above5">No of Child above 5 years: </label>
+                        <input id="no.Child_above5" type="number" placeholder="Number of Adults" min="0" max="8">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="singleRoom">Single Room: Rs.25,000.00 </label>
                         <input id="singleRoom" type="number" placeholder="Number of Rooms" min="0" max="4">
-                    </section>
-                    <section class="form-column">
-                        <label for="double">Double: Rs.35,000.00 </label>
+                    </div>
+                    <div class="form-column">
+                        <label for="doubleRoom">Double: Rs.35,000.00 </label>
                         <input id="doubleRoom" type="number" placeholder="Number of Rooms" min="0" max="4">
-                    </section>
-                    <section class="form-column">
-                        <label for="triple">Triple: Rs.40,000.00 </label>
-                        <input id="tripleRoom" type="number" placeholder="Number of Rooms" min="0" max="4" maxlength="1">
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
+                    </div>
+                    <div class="form-column">
+                        <label for="tripleRoom">Triple: Rs.40,000.00 </label>
+                        <input id="tripleRoom" type="number" placeholder="Number of Rooms" min="0" max="4">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
                         <label for="extraBed">Extra Bed: Rs.8,000.00 </label>
                        <select name="extra-Bed" id="extraBed">
                         <option value="0" selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                        </select>
-                    </section>
-                </section>
-                <section class="form-row">
-                    <section class="form-column">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
                         <label for="specialreq">Special Requirments: </label>
-                        <textarea name="special-req" id="" cols="5" rows="5"></textarea>
-                    </section>
-                </section>
+                        <textarea name="special-req" id="specialreq" cols="5" rows="5"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button id="favoriteBtn">Add to favorite</button>
+                </div>
+                
 
                 <!--Output Fieldset-->
 
@@ -149,81 +152,92 @@
                    <div id="CostofCurrentBooking"></div>
                     
                 </fieldset>
-                <p><button type="button" id="Hellobtn">Pay</button></p>
+            
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="promocode">Promo-Code : </label><br>
+                    <input class="promo-code" id="promocode" type="text">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <button type="button" class="Validation" id="validate">Check Validation</button>
+                </div>
+            </div>
+                <p><button type="submit" id="roombook">B O O K</button></p>
         </form>
    </fieldset>
-
-
+</section>
+<section>
    <!--Adventure Booking Section-->
 
 
    <fieldset class="Booking">
     <legend>Adventure Booking</legend>
-    <form action="">
-        <section class="form-row">
-            <section class="form-column">
-                <label for="firstName">First Name : </label>
+    <form  id="AdventureForm">
+        <div class="form-row">
+            <div class="form-column">
+                <label for="FnAdv">First Name : </label>
                 <input type="text" placeholder="Type your Name Here" id="FnAdv" required>
-            </section>
-            <section class="form-column">
-                <label for="lastName">Last Name : </label>
+            </div>
+            <div class="form-column">
+                <label for="LnAdv">Last Name : </label>
                 <input type="text" placeholder="Type your Name Here" id="LnAdv" required>
-            </section>
-        </section>
-        <section class="form-row">
-            <section class="form-column">
-                <label for="Date">Date: </label>
-                <input type="date" placeholder="Date" id="AdvDate" required>
-            </section>
-            <section class="form-column">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-column">
+                <label for="AdvDate">Date: </label>
+                <input type="date"  id="AdvDate" required>
+            </div>
+            <div class="form-column">
                 <label for="nationality">Nationality: </label>
                 <input type="text" placeholder="Example: British" id="AdvNationality" required>
-            </section>
-        </section>
-        <section class="form-row">
-            <section class="form-column">
-                <label for="numAdult">Adults: </label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-column">
+                <label for="NumofAdultsAdventure">Adults: </label>
                 <input type="number" placeholder="Number of Adults" id="NumofAdultsAdventure" min="1" max="8" required>
-            </section>
-            <section class="form-column">
-                <label for="numChild">Children: </label>
+            </div>
+            <div class="form-column">
+                <label for="NumofKidsAdventure">Children: </label>
                 <input type="number" placeholder="Number of Adults" id="NumofKidsAdventure" min="0">
-            </section>
-        </section>
-        <section class="form-row">
-            <section class="form-column">
-                <label for="contactNumber">Contact Number: </label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-column">
+                <label for="ContactNo">Contact Number: </label>
                 <input type="tel" placeholder="0 123 456 789" id="ContactNo" required>
-            </section>
-            <section class="form-column">
-                <label for="email">Email: </label>
+            </div>
+            <div class="form-column">
+                <label for="EmailAdv">Email: </label>
                 <input type="email" id="EmailAdv" placeholder="Example@mail.com">
-            </section>
-        </section>
+            </div>
+        </div>
         
-        <section class="form-row">
+        <div class="form-row">
             
-            <section class="form-column">
-                <label for="diving">Diving: </label>
+            <div class="form-column">
+                <label for="Diving">Diving: </label>
                 <select name="diving" id="Diving" >
                     <option value="0" selected>None</option>
                     <option value="1">1hr</option>
                     <option value="2">2hr</option>
                     <option value="3">3hr</option>
                 </select>
-            </section>
-            </section>
-        </section>
-        <section class="form-row">
-            <section class="form-column">
-                <label for="guide" id="AdvGuide">Guide : </label>
-                
-               <input type="radio" name="guide" id="guidecheck" value="Yes" required>
-               <label >Yes</label>
-                <input type="radio" name="guide" id="guidecheck2" value="No">
-                <label >No</label>
-            </section>
-        </section>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-column">
+                <label  id="AdvGuide">Guide : </label>
+                <label >
+                <input type="checkbox" name="guide" id="guidecheck" value="Yes">
+               Yes</label>
+            </div>
+        </div>
+        <p><button type="submit" id="adventurebook">B O O K</button></p>
     </form>
     <fieldset>
         <h3>Current Adventure Booking Details</h3>
@@ -235,56 +249,61 @@
         <Div id="CurrentCostofAdvBooking"></Div>
         <br>
     </fieldset>
+    
    </fieldset>
 
    <fieldset class="Booking">
     <legend>Payment</legend>
-    <form action="">
+    <form>
          <!--Payment Section of the Form-->
 
          <h2>Payment</h2>
-         <section class="form-row">
+         <div class="form-row">
              <img src="./Images/payment.png" alt="Accepted Cards Visa and Master Card">
-         </section>
-         <section class="form-row">
-             <section class="form-column">
-                 <label for="cardNumber">Card Number: </label>
-                 <input type="text" placeholder="342-12321-323-32" required>
-             </section>
-             <section class="form-column">
-                 <label for="cardName">Card Name: </label>
-                 <input type="text" placeholder="John Smith" required>
-             </section>
-         </section>
-         <section class="form-row">
-             <section class="form-column">
-                 <label for="expireDate">Expire Date: </label>
-                 <input type="text" required>
-             </section>
-             <section class="form-column">
-                 <label for="cvNumber">CV Number: </label>
-                 <input type="text" required>
-             </section>
-         </section>
-         <section class="form-row">
-             <section class="form-column">
-                 <label for="Promocode">Promo-Code : </label><br>
-                 <input class="promo-code" type="text" max="8">
-             </section>
-         </section>
-         <section class="form-row">
-             <section class="form-column">
-                 <button class="Validation">Check Validation</button>
-             </section>
-         </section>
-         
-             <p>
-                 <button class="room-btn" type="submit">BOOK</button>
+         </div>
+         <div class="form-row">
+             <div class="form-column">
+                 <label for="cardnumber">Card Number: </label>
+                 <input type="text" id="cardnumber" placeholder="342-12321-323-32" required>
+             </div>
+             <div class="form-column">
+                 <label for="cardname">Card Name: </label>
+                 <input type="text" id="cardname" placeholder="John Smith" required>
+             </div>
+         </div>
+         <div class="form-row">
+             <div class="form-column">
+                 <label for="expiredate">Expire Date: </label>
+                 <input type="text" id="expiredate" placeholder="MM/YY" required>
+             </div>
+             <div class="form-column">
+                 <label for="cvnumber">CV Number: </label>
+                 <input type="text" id="cvnumber" max="3" required>
+             </div>
+             <div class="form-column">
+                <button class="room-btn" type="submit">BOOK</button>
                  <button class="room-btn" type="reset">Reset</button>
-             </p>
+             </div>
+         
+         </div> 
             
     </form>
+   
    </fieldset>
+</section>
+<fieldset class="Booking">
+    <legend>Overall Booking</legend>
+    <section>
+        <div id="overallBookings">
+            <h3>Overall Bookings</h3>
+            <div id="output6"></div>
+        </div>
+        </section>
+        <div>
+            <button>Check Loyalty Points</button>
+        </div>
+</fieldset>
+
 <!--Footer-->
 
 
