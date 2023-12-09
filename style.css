@@ -841,17 +841,23 @@ p {
     background-repeat: no-repeat;
 }
 .B-intro h2 {
+    
     margin: 30px 0;
     font-size: 47px;
+    padding: 10px 0;
     font-family: serif;
     font-weight: 300;
     text-align: center;
+    line-height: 15px;
 }
 .B-intro p { 
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 400;
     text-align: center;
     line-height: 30px;
     margin-bottom: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .Booking {
     max-width: 1200px;
@@ -882,6 +888,7 @@ h2
     font-size: 50px;
     text-decoration: underline;
     font-weight: 300;
+    text-shadow: 5px -5px 6px rgb(129, 215, 249);
 }
 h3
 {
@@ -952,7 +959,71 @@ select, option
 #RoomDetailsofCB{
     font-size: 22px;
 }
-#bookForm{
+fieldset{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+}
+#CurrentAdventureBooking{
+    font-size: 22px;
+}
+#CurrentCostofAdvBooking{
+    font-size: 22px;
+}
+#roombook:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: .5s;
+}
+#roombook{
+    margin-left: 45%;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+#overallBookings h3{
+    display:none;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+input{
+    cursor:pointer;
+}
+
+#favoriteBtn {
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    background: linear-gradient(to left, rgb(233, 44, 227), rgb(156, 156, 238), aqua);
+    background-size: 200% 100%; 
+    transition: background-position 1s; 
+    width: 300px;
+}
+
+#favoriteBtn:hover {
+    background-position: 100% 0;
+}
+#roombook, #adventurebook{
+    font-family: sans-serif;
+    background: linear-gradient(to right, rgb(165, 165, 247),rgb(20, 234, 238),rgb(140, 241, 246));
+    padding: 5p 20px;
+    font-size: 25px;
+    font-weight: 200;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 5px 2px rgba(117, 24, 133, 0.6);
+    cursor: pointer;
+    width: 200px;
+}
+#adventurebook{
+    padding: 10px 10px;
 }
